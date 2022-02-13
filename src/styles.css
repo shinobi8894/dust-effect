@@ -1,0 +1,103 @@
+html {
+  background: linear-gradient(135deg, #2b7594 0%, #655900 100%);
+  position: fixed;
+  overflow: hidden;
+  font-family: "Orbitron", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.slider-box {
+  float: right;
+  margin: 10px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+#range {
+  margin-top: 5px;
+  color: #eee;
+  font-size: 10pt;
+  margin-left: 10px;
+  position: relative;
+}
+
+#specks {
+  position: absolute;
+  z-index: 999;
+  height: 100vh;
+  width: 100vw;
+}
+
+.speck {
+  opacity: 0;
+  height: 4px;
+  width: 4px;
+  background: url("http://i1272.photobucket.com/albums/y391/matthew_williams10/speck_zpsu9xym9zl.png");
+  background-size: cover;
+  position: absolute;
+  border-radius: 10px;
+  z-index: 99;
+}
+
+.img {
+  position: absolute;
+  height: 100000px;
+  width: 100000px;
+  top: -8500px;
+  left: -8000px;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  animation-name: float;
+  animation-iteration-count: infinite;
+}
+
+#img-1 {
+  opacity: 0.25;
+  background: url("https://image.ibb.co/jcTvpv/dust1.jpg");
+  background-repeat: repeat;
+  animation-duration: 600s;
+}
+
+#img-2 {
+  opacity: 0.2;
+  background: url("https://image.ibb.co/goU1Uv/dust2.jpg");
+  background-repeat: repeat;
+  animation-duration: 450s;
+}
+
+#img-3 {
+  opacity: 0.15;
+  background: url("https://image.ibb.co/cymRwa/dust3.jpg");
+  background-repeat: repeat;
+  animation-duration: 350s;
+}
+/*ANIMATIONS*/
+
+@keyframes twinkle {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(175px, 100px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(8000px, 4000px);
+  }
+}
